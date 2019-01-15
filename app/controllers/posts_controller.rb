@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 
   	if(@post.save)
       flash[:success] = "Success!"
-  		redirect_to @post
+  		redirect_to post_path(@post)
   	else
       flash[:error] = @post.error.full_messages
   		render 'new'
@@ -26,7 +26,7 @@ class PostsController < ApplicationController
   private 
 
     def post_params
-  	 params.require(:post).permit(:title, :body, :image)
+  	 params.require(:post).permit(:image, :description)
     end
 
 end

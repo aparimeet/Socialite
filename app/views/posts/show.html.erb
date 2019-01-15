@@ -1,3 +1,5 @@
-<h2><%= @post.title %></h2>
-<p><%= @post.body %></p>
-<%= image_tag(@post.url(:medium)) %>
+<div class = "white">
+	<%= image_tag(@post.image.url(:medium)) %>
+	<br>
+	<%= @post.description %>
+</div>

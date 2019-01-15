@@ -1,8 +1,7 @@
 <h1>News Feed</h1>
 <% @posts.each do |post| %>
 	<div class="well">
- 		<h1><%= post.title %></h1>
- 		<p><%= post.body %></p>
+ 		<p><%= post.description %></p>
  		<%= image_tag post.image.url(:medium) %>
  	</div>
  <% end %>

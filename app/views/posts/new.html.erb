@@ -8,13 +8,14 @@
 		
 
 	<%= form_for @post do |f| %>
+		<%= f.label :image %>
+		<%= f.file_field :image %>
+		<br>
+
 		<%= f.label :description %>
 		<%= f.text_area :description %>
 		<br> 
-	
-		<%= f.label :image %><br>
-		<%= f.file_field :image %>
-		<br>
+
 		<%= f.submit({:class => 'btn btn-primary'}) %>
 	<% end %>
 <% end %>
