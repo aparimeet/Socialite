@@ -6,25 +6,17 @@
 		<% end %>	
 	<% end %>
 		
-	<%= f.label :title %>
-	<%= f.text_field :title %>
-	<br>
 
-	<%= f.label :body %><br>
-	<%= f.text_area :body %>
-	<br>
-	<%= f.label :image %><br>
-	<%= f.file_field :image %>
-	<br>
-	<%= f.submit({:class => 'btn btn-primary'}) %>
+	<%= form_for @post do |f| %>
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+		<br> 
+	
+		<%= f.label :image %><br>
+		<%= f.file_field :image %>
+		<br>
+		<%= f.submit({:class => 'btn btn-primary'}) %>
+	<% end %>
 <% end %>
 
-<!--<h1>New Post</h1>
 
-<%= form_for @post do |f| %>
-	<%= f.label :description %>
-	<%= f.text_area :description %>
-	<br>
-	<%= f.submit %>
-
-<% end %> -->
